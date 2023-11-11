@@ -30,7 +30,7 @@
 
 
 <style scoped lang="scss">
-.app-topnav {
+  .app-topnav {
   background: #333;
   ul {
     display: flex;
@@ -61,5 +61,5 @@
       }
     }
   }
-}
+  }
 </style>
