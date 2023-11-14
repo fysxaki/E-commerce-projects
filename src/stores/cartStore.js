@@ -2,6 +2,7 @@
 import { computed, ref } from "vue";
 import { defineStore } from "pinia";
 
+
 export const useCartStore = defineStore(
   "cart",
   () => {
@@ -38,6 +39,12 @@ export const useCartStore = defineStore(
       item.selected = selected;
     };
 
+    // 全选功能
+    const allCheck = (selected) => {
+      // 把cartList中的每一项的selected都设置为当前的全选框状态
+      cartList.value.forEach((item) => (item.selected = selected));
+    };
+
     //计算属性
     //  1.总数量 所有项的count之和
     const allCount = computed(() =>
@@ -50,10 +57,16 @@ export const useCartStore = defineStore(
         0
       )
     );
+
+    //是否全选
+    const isAll = computed(() => cartList.value.every((item) => item.selected)); // 数组方法every每一项
+
     return {
       cartList,
       allCount,
       allPrice,
+      isAll,
+      allCheck,
       addCart,
       delCart,
       singleCheck,
