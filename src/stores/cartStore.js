@@ -53,6 +53,11 @@ export const useCartStore = defineStore(
       }
     };
 
+    //清除购物车
+    const clearCart = () => {
+      cartList.value = [];
+    };
+
     // 单选功能
     const singleCheck = (skuId, selected) => {
       // 通过skuId找到要修改的那一项, 然后把他的selected修改为新的传过来的值
@@ -101,6 +106,7 @@ export const useCartStore = defineStore(
       selectedCount,
       selectedPrice,
       isAll,
+      clearCart,
       allCheck,
       addCart,
       delCart,
