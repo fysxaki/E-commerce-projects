@@ -106,6 +106,7 @@ export const useCartStore = defineStore(
       selectedCount,
       selectedPrice,
       isAll,
+      updateNewList,
       clearCart,
       allCheck,
       addCart,
