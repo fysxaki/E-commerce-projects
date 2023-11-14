@@ -7,13 +7,13 @@ import 'element-plus/theme-chalk/el-message.css'
 
 import {useRouter} from 'vue-router'
 
-import { useUserStore } from '@/stores/user'
+import { useUserStore } from '@/stores/userStore'
 
 const userStore = useUserStore()
 // 表单校验功能(账户名及密码)
 // 1. 准备表单对象
 const form = ref({
-  account: 'xiaotuxian001',
+  account: 'cdshi0073',
   password: '123456',
   agree: true
 })
