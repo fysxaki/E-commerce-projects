@@ -57,6 +57,18 @@ export const useCartStore = defineStore(
         0
       )
     );
+    // 3. 已选择数量
+    const selectedCount = computed(() =>
+      cartList.value
+        .filter((item) => item.selected)
+        .reduce((allSum, item) => allSum + item.count, 0)
+    );
+    // 4. 已选择商品价钱合计
+    const selectedPrice = computed(() =>
+      cartList.value
+        .filter((item) => item.selected)
+        .reduce((allSum, item) => allSum + item.count * item.price, 0)
+    );
 
     //是否全选
     const isAll = computed(() => cartList.value.every((item) => item.selected)); // 数组方法every每一项
@@ -65,6 +77,8 @@ export const useCartStore = defineStore(
       cartList,
       allCount,
       allPrice,
+      selectedCount,
+      selectedPrice,
       isAll,
       allCheck,
       addCart,
