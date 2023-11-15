@@ -105,7 +105,7 @@ const orderList = []
 </template>
 
 <style scoped lang="scss">
-.order-container {
+  .order-container {
   padding: 10px 20px;
 
   .pagination-container {
@@ -123,9 +123,9 @@ const orderList = []
       align-items: center;
     }
   }
-}
+  }
 
-.order-item {
+  .order-item {
   margin-bottom: 20px;
   border: 1px solid #f5f5f5;
 
@@ -263,5 +263,5 @@ const orderList = []
       }
     }
   }
-}
+  }
 </style>
