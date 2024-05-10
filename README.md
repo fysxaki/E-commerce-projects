@@ -30,6 +30,7 @@ An e-commerce project that connects the entire shopping process and calls the pa
 
 
 其中一段代码展示：
+```javascript
 // 从m中取n的所有组合
 function getFlagArrs(m, n) {
     var flagArrs = [],
@@ -63,4 +64,5 @@ function getFlagArrs(m, n) {
     }
     return flagArrs;
 }
+```
 这个方法在调用后返回的 flagArrs 并不是最终所需要的业务数据，而是返回一组这样的数据
